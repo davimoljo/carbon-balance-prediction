@@ -1,0 +1,1663 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#"
+     xml:base="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:CarbonOnto2-0="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto2-0#"
+     xmlns:CarbonOnto3-0="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto3-0#"
+     xmlns:CarbonOnto4-0="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0">
+        <rdfs:comment>An ontology to integrate data from heterogeneous sources for carbon footprint</rdfs:comment>
+        <rdfs:comment>Catte: emission factor (kg CH4/cabeça/ano). Ruminant_Animal_Emission_Factor values were entered in SWRL rules</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CH4IsEmittedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CH4IsEmittedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCH4"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CO2IsEmittedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CO2IsEmittedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#N2OIsEmittedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#N2OIsEmittedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitN2O"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalBreed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalBreed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Breed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalEmissionFactor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalEmissionFactor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Emission_Factor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasClimate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasClimate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isClimateOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoveragePeriod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoveragePeriod">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Period"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverageType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverageType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasDigestiveProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasDigestiveProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isDigestiveProcessOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCH4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCH4">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CH4"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitN2O -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitN2O">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Emit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#N2O"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodAnimal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodAnimal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodCoverage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodCoverage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Coverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodElectricity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodElectricity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Electricity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodFuel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodFuel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Mobile_Machinery"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Stationary_Machinery"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodStockSoil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodStockSoil">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Stock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationCO2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationCO2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CO2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isClimateOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isClimateOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isDigestiveProcessOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isDigestiveProcessOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Enteric_Fermentation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isMethodOfYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isMethodOfYear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#fractionAppliedVolatilizesInNH3andNOx -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#fractionAppliedVolatilizesInNH3andNOx">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasBalance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasBalance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasBalance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmAreaHa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmAreaHa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasBalance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCalciticLimestone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCalciticLimestone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleFemaleMilkQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleFemaleMilkQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleFemaleQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleFemaleQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleMaleQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleMaleQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleYoungQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattleYoungQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasElectricityConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasElectricityConsumption"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionElectricityCO2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionElectricityCO2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleFemale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleFemale">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleFemaleMilk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleFemaleMilk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleMale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleMale">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleYoung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCH4CattleYoung">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCalciticLimestone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorCalciticLimestone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorDolomiticLimestone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorDolomiticLimestone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorElectricityCO2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorElectricityCO2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorFuelCO2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorFuelCO2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorOrganicFertilizer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorOrganicFertilizer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorSyntheticFertilizer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactorSyntheticFertilizer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFactor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Synthetic_Fertilizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFuelCO2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionFuelCO2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionLimestone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionLimestone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionOrganicFertilizer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionOrganicFertilizer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionSyntheticFertilizer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionSyntheticFertilizer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionTotalValueCH4 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionTotalValueCH4">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleFemale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleFemale">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleFemaleMilk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleFemaleMilk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleMale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleMale">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleYoung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCH4CattleYoung">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmAreaHa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmAreaHa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasFuelConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasFuelConsumption"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityDolomiticLimestone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityDolomiticLimestone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityElectricityConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityElectricityConsumption">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityFuelConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityFuelConsumption">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityOrganicFetilizerApplied -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantityOrganicFetilizerApplied">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantitySyntheticFetilizerApplied -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantitySyntheticFetilizerApplied">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Synthetic_Fertilizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestration"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestration"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmAreaHa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmAreaHa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSize"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarm">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSize"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarmArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarmArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSize"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasTotalAnimalQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasTotalAnimalQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCattle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#percentageNitrogenOrganicFertilizerApplied -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#percentageNitrogenOrganicFertilizerApplied">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasQuantity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Biome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Biome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CH4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CH4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CO2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CO2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#City">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasClimate"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Biome"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Period -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Period">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Soil"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Soil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Soil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Soil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Electricity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Electricity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Enteric_Fermentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Enteric_Fermentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCH4"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CH4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalBreed"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Breed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalCategory"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalEmissionFactor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Emission_Factor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasAnimalType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasClimate"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCH4"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Electricity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Mobile_Machinery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Stationary_Machinery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodAnimal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasClimate"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoveragePeriod"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCoverageType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Coverage_Soil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Pruning_Waste"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitN2O"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Synthetic_Fertilizer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmitN2O"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Pesticides/Herbicides"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodCoverage"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Coverage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodStockSoil"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Stock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasGHGMeasureMethodYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationCO2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#CO2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Animal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isMethodOfYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Coverage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Coverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#isMethodOfYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Stock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Stock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Measure_Method_Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Liming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Mobile_Machinery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Mobile_Machinery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#N2O -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#N2O">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#GHG_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Organic_Fertilizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Pruning_Waste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Pruning_Waste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Breed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Breed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Emission_Factor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Emission_Factor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasDigestiveProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Enteric_Fermentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Mechanical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Mechanical">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Stationary_Machinery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Stationary_Machinery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Synthetic_Fertilizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Synthetic_Fertilizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Pesticides/Herbicides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Pesticides/Herbicides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Source_Non-Mechanical"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Biome"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Biome"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Climate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#State"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Breed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Category"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Emission_Factor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Ruminant_Animal_Type"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hCO2Bbfa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsvCO2fa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hevCO2fa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hevCO2faha">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsvCO2faha">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>CO2 Balance per hectare</rdfs:comment>
+        <rdfs:label>FarmArea: balance_CO2_ha</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hCO2Bbfa"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmArea"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hCO2Bbfa"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarmArea"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmAreaHa"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>CO2 Balance in each area of the farm</rdfs:comment>
+        <rdfs:label>FarmArea: balance_CO2_area</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsvCO2fa"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hevCO2fa"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmArea"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsvCO2fa"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmArea"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hevCO2fa"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasCO2BalanceFarmArea"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>CO2 emission in each area of the farm</rdfs:comment>
+        <rdfs:label>FarmArea:CO2_emission_area</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hevCO2faha"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmAreaHa"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hevCO2faha"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarmArea"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasEmissionValueCO2FarmArea"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>CO2 sequestration in each area of the farm</rdfs:comment>
+        <rdfs:label>FarmArea:CO2_stock_area</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#Farm_Area"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsvCO2faha"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmAreaHa"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsvCO2faha"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSizeFarmArea"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#hsfa"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2023/05/CarbonOnto4-0#hasSequestrationValueCO2FarmArea"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#fa"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/11/untitled-ontology-100#total"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
