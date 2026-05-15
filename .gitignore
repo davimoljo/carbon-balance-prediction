@@ -1,3 +1,4 @@
 # Ignore large data files
 *.xlsx
 *.csv
+*.xls
