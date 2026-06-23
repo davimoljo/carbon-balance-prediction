@@ -1,4 +1,4 @@
-# 🌱 Carbon Prediction Dashboard: Prediction AI for MRV
+# 🌱 Carbon Prediction Dashboard
 
 ## 📌 Overview
 This project presents a Measurement, Reporting, and Verification (MRV) platform. It integrates spatial agricultural data with Machine Learning to predict carbon balances (emissions and sequestration) across Brazilian farms.
