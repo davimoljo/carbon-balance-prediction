@@ -17,13 +17,19 @@ By combining the deterministic logic of the **CarbOnto** ontology (based on IPCC
 * **Geospatial & Mapping:** Folium, Geopy
 * **Data Manipulation:** Pandas, NumPy
 
-## 📊 How it Works
-1. **Location Filters:** Navigate through States, Cities, and specific Farm IDs.
-2. **Carbon Metrics:** The system compares the historical reality (tCO2/ha) against the Artificial Intelligence prediction. It also calculates the total volume of CO2.
-3. **Spatial Awareness:** Generates a proportional boundary circle on the map to represent the farm size.
+## ⚙️ How to Run the Project (Reproducibility)
+Due to the large size of the integrated datasets (>100MB, exceeding GitHub storage limits), the complete datasets and the interactive Jupyter Notebooks required to reproduce the ML results are hosted securely on Google Drive.
 
-## 🔮 Roadmap & Future Work
-* **Explainable AI (xAI):** Implementation of SHAP (SHapley Additive exPlanations) to provide feature importance transparency. This will prove the model's reliance on domain-specific rules (e.g., land use) rather than environmental noise.
+📥 **[CLICK HERE TO DOWNLOAD THE PROJECT FOLDER FROM GOOGLE DRIVE](https://drive.google.com/drive/folders/1fX9FBQgPGEcuXs3zou5eRAg1QY-2zDKg?usp=sharing)**
 
-## 🎓 Acknowledgements
-This project is part of an undergraduate research (Iniciação Científica) at the **Universidade Federal de Juiz de Fora (UFJF)**. 
+### Prerequisites
+* **IDE:** [Visual Studio Code (VS Code)](https://code.visualstudio.com/) is highly recommended.
+* **VS Code Extensions:** Ensure you have the **Python** and **Jupyter** extensions installed in VS Code to run the notebooks properly. Additionally, it is highly required to install the **Google Colab** extension. This allows you to run the heavy ML notebooks using cloud processing power, preventing any performance issues or overload on your local machine's hardware.
+* **Python:** Version 3.8 or higher.
+
+### Step-by-Step Execution
+1. **Download and Extract:** Download the complete folder from the Google Drive link above and extract it on your local machine.
+2. **Open the Project:** Open the extracted folder in Visual Studio Code.
+3. **Install Dependencies:** Open the VS Code integrated terminal (`Ctrl` + `'`) and install the required libraries:
+   ```bash
+   pip install streamlit scikit-learn pandas numpy folium geopy yellowbrick
