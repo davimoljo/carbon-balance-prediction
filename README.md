@@ -19,6 +19,8 @@ By combining the deterministic logic of the **CarbOnto** ontology (based on IPCC
 
 ## ⚙️ How to Run the Project (Reproducibility)
 Due to the large size of the integrated datasets (>100MB, exceeding GitHub storage limits), the complete datasets and the interactive Jupyter Notebooks required to reproduce the ML results are hosted securely on Google Drive.
+## ⚠️ Important Execution Step for Google Colab:
+To run the notebooks seamlessly and without altering any directory paths, please download the project folder from the link provided and upload it directly to the root of your own Google Drive ("My Drive"). The script is natively designed to mount your Drive and locate the files automatically.
 
 📥 **[CLICK HERE TO DOWNLOAD THE PROJECT FOLDER FROM GOOGLE DRIVE](https://drive.google.com/drive/folders/1fX9FBQgPGEcuXs3zou5eRAg1QY-2zDKg?usp=sharing)**
 
